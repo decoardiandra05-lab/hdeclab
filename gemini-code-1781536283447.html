@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H DEC LAB | Engineering Portfolio Exhibition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Efek aura hijau khas elektro saat kartu proyek disentuh */
+        .glow-effect:hover {
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.25);
+            border-color: #22c55e;
+        }
+        /* Transisi halus saat filter kategori berubah */
+        .project-card {
+            transition: all 0.4s ease-in-out;
+        }
+        .project-card.hidden {
+            display: none;
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-green-500 selection:text-black">
+
+    <nav class="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md fixed top-0 w-full z-50">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="logo hdeclab.jpeg" alt="H DEC LAB Logo" class="w-8 h-8 rounded-lg object-cover shadow-md shadow-green-500/10 border border-zinc-800">
+                <span class="font-tracking-widest font-black text-lg tracking-wider text-green-400">H DEC LAB</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-zinc-400">
+                <a href="#home" class="hover:text-green-400 transition">Home</a>
+                <a href="#expertise" class="hover:text-green-400 transition">Expertise</a>
+                <a href="#projects" class="hover:text-green-400 transition">Exhibition</a>
+                <a href="#contact" class="hover:text-green-400 transition">Socials</a>
+            </div>
+            <div class="flex space-x-4 text-zinc-400 text-lg">
+                <a href="https://www.tiktok.com/@hdec_lab" target="_blank" class="hover:text-green-400 transition">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://instagram.com/hdec_lab" target="_blank" class="hover:text-green-400 transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-36 pb-20 px-4 max-w-4xl mx-auto text-center min-h-screen flex flex-col justify-center items-center">
+        <div class="relative mb-6 group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+            <img src="logo hdeclab.jpeg" alt="H DEC LAB Main Logo" class="relative w-24 h-24 md:w-28 md:h-28 rounded-2xl object-cover border border-zinc-800 shadow-2xl">
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent">
+            Transforming Electro-Mechanical Concepts into Reality.
+        </h1>
+        <p class="text-zinc-400 text-base md:text-lg max-w-2xl mb-10 leading-relaxed">
+            From embedded system firmware and electronic design to precision 3D mechanical modeling and dynamic IoT interfaces, we engineer intelligent automation solutions.
+        </p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="#projects" class="bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded transition text-sm shadow-lg shadow-green-500/20">
+                Open Exhibition
+            </a>
+            <a href="#contact" class="border border-zinc-800 hover:bg-zinc-900 px-6 py-3 rounded transition text-sm text-zinc-300">
+                Connect With Us
+            </a>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-20 bg-zinc-900/40 border-y border-zinc-900 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-2">Core Technical Disciplines</h2>
+                <p class="text-zinc-500 text-sm">Empat pilar utama pengembangan dan rekayasa teknologi di laboratorium kami.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="p-6 bg-zinc-900 border border-zinc-800 rounded">
+                    <div class="text-green-400 text-2xl mb-4"><i class="fas fa-code"></i></div>
+                    <h3 class="font-bold text-base mb-2">Program & Firmware</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Pengembangan arsitektur kode C/C++ mikrokontroler yang efisien dan non-blocking.</p>
+                </div>
+                <div class="p-6 bg-zinc-900 border border-zinc-800 rounded">
+                    <div class="text-green-400 text-2xl mb-4"><i class="fas fa-microchip"></i></div>
+                    <h3 class="font-bold text-base mb-2">Electronic System</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Instrumentasi sirkuit, pengondisian sinyal sensor analog, dan manajemen regulasi daya.</p>
+                </div>
+                <div class="p-6 bg-zinc-900 border border-zinc-800 rounded">
+                    <div class="text-green-400 text-2xl mb-4"><i class="fas fa-cubes"></i></div>
+                    <h3 class="font-bold text-base mb-2">3D Design & Enclosure</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Pemodelan sasis mekanis presisi tinggi skala milimeter menggunakan Autodesk Inventor.</p>
+                </div>
+                <div class="p-6 bg-zinc-900 border border-zinc-800 rounded">
+                    <div class="text-green-400 text-2xl mb-4"><i class="fas fa-desktop"></i></div>
+                    <h3 class="font-bold text-base mb-2">IoT & Local Display</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Integrasi data real-time pada display LCD fisik serta pemantauan cloud jarak jauh.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="mb-10 text-center md:text-left">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2">Project Exhibition</h2>
+            <p class="text-zinc-500 text-sm">Filter arsip berdasarkan pilar kompetensi untuk meninjau dokumentasi teknis laboratorium kami.</p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-12 border-b border-zinc-900 pb-6">
+            <button onclick="filterProjects('all')" class="filter-btn bg-green-500 text-black font-semibold px-4 py-2 rounded text-xs tracking-wider uppercase transition">All Disciplines</button>
+            <button onclick="filterProjects('program')" class="filter-btn bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 px-4 py-2 rounded text-xs tracking-wider uppercase transition">Program</button>
+            <button onclick="filterProjects('electronic')" class="filter-btn bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 px-4 py-2 rounded text-xs tracking-wider uppercase transition">Electronic</button>
+            <button onclick="filterProjects('design')" class="filter-btn bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 px-4 py-2 rounded text-xs tracking-wider uppercase transition">3D Design</button>
+            <button onclick="filterProjects('display')" class="filter-btn bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 px-4 py-2 rounded text-xs tracking-wider uppercase transition">IoT & Display</button>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card group border border-zinc-800 bg-zinc-900/20 rounded overflow-hidden glow-effect" data-category="program,electronic,design,display">
+                <div class="aspect-video bg-zinc-900 overflow-hidden relative">
+                    <img src="SUHU.jpg" alt="FuelGuard TDS Exhibition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-[10px] uppercase tracking-widest font-mono bg-green-500 text-black px-3 py-1.5 font-bold rounded">
+                            Active Test Lab
+                        </span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <span class="text-[10px] bg-zinc-800 text-green-400 font-mono px-2 py-0.5 rounded">FLAGSHIP PROJECT</span>
+                    <h3 class="font-bold text-base mt-3 mb-1.5 text-white">FuelGuard TDS System</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed mb-4">Sistem instrumentasi deteksi kontaminasi air pada bensin berbasis sensor TDS dan mikrokontroler. Dirancang dengan manajemen display terintegrasi guna memantau kualitas kemurnian bahan bakar secara langsung.</p>
+                    
+                    <div class="border-t border-zinc-800/80 pt-4 mt-2">
+                        <p class="text-[10px] text-zinc-500 font-mono mb-2 uppercase tracking-wider">Secure Technical Review:</p>
+                        <div class="grid grid-cols-4 gap-1">
+                            <button onclick="handleProjectAccess('fuel', 'fuel_program')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-code block mb-1 text-xs"></i> Program
+                            </button>
+                            <button onclick="handleProjectAccess('fuel', 'fuel_electronic')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-microchip block mb-1 text-xs"></i> Electronic
+                            </button>
+                            <button onclick="handleProjectAccess('fuel', 'fuel_design')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-cube block mb-1 text-xs"></i> 3D Design
+                            </button>
+                            <button onclick="handleProjectAccess('fuel', 'fuel_display')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-desktop block mb-1 text-xs"></i> Display
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group border border-zinc-800 bg-zinc-900/20 rounded overflow-hidden glow-effect" data-category="program,electronic,design,display">
+                <div class="aspect-video bg-zinc-900 overflow-hidden relative">
+                    <img src="WhatsApp Image 2026-06-08 at 14.50.54.jpeg" alt="AirGuard AQMS Exhibition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-[10px] uppercase tracking-widest font-mono bg-green-500 text-black px-3 py-1.5 font-bold rounded">
+                            Precision Analysis
+                        </span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <span class="text-[10px] bg-zinc-800 text-green-400 font-mono px-2 py-0.5 rounded">ENVIRONMENTAL SYSTEM</span>
+                    <h3 class="font-bold text-base mt-3 mb-1.5 text-white">AirGuard AQMS</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed mb-4">Sistem pemantauan kualitas udara box akrilik bening. Mengintegrasikan sensor gas MQ, DHT, serta exhaust fan kontroler mekanis untuk sirkulasi dan kalkulasi status kebersihan udara secara real-time.</p>
+                    
+                    <div class="border-t border-zinc-800/80 pt-4 mt-2">
+                        <p class="text-[10px] text-zinc-500 font-mono mb-2 uppercase tracking-wider">Secure Technical Review:</p>
+                        <div class="grid grid-cols-4 gap-1">
+                            <button onclick="handleProjectAccess('aqms', 'aqms_program')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-code block mb-1 text-xs"></i> Program
+                            </button>
+                            <button onclick="handleProjectAccess('aqms', 'aqms_electronic')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-project-diagram block mb-1 text-xs"></i> Electronic
+                            </button>
+                            <button onclick="handleProjectAccess('aqms', 'aqms_design')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-layer-group block mb-1 text-xs"></i> 3D Design
+                            </button>
+                            <button onclick="handleProjectAccess('aqms', 'aqms_display')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-desktop block mb-1 text-xs"></i> Display
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group border border-zinc-800 bg-zinc-900/20 rounded overflow-hidden glow-effect" data-category="program,electronic,design,display">
+                <div class="aspect-video bg-zinc-900 overflow-hidden relative">
+                    <img src="SUHU.jpg" alt="IoT Climate Monitoring Exhibition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-[10px] uppercase tracking-widest font-mono bg-green-500 text-black px-3 py-1.5 font-bold rounded">
+                            Cloud Telemetry
+                        </span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <span class="text-[10px] bg-zinc-800 text-green-400 font-mono px-2 py-0.5 rounded">CLIMATE AUTOMATION</span>
+                    <h3 class="font-bold text-base mt-3 mb-1.5 text-white">IoT Climate System</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed mb-4">Sistem stasiun cuaca portabel boks hitam dengan sinkronisasi nirkabel Blynk IoT dashboard. Menampilkan parameter kelembapan dan temperatur secara live pada LCD fisik maupun widget lingkaran PC.</p>
+                    
+                    <div class="border-t border-zinc-800/80 pt-4 mt-2">
+                        <p class="text-[10px] text-zinc-500 font-mono mb-2 uppercase tracking-wider">Secure Technical Review:</p>
+                        <div class="grid grid-cols-4 gap-1">
+                            <button onclick="handleProjectAccess('climate', 'climate_program')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-code block mb-1 text-xs"></i> Program
+                            </button>
+                            <button onclick="handleProjectAccess('climate', 'climate_electronic')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-microchip block mb-1 text-xs"></i> Electronic
+                            </button>
+                            <button onclick="handleProjectAccess('climate', 'climate_design')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-cube block mb-1 text-xs"></i> 3D Design
+                            </button>
+                            <button onclick="handleProjectAccess('climate', 'climate_display')" class="bg-zinc-900 hover:bg-green-500 hover:text-black border border-zinc-800 text-zinc-300 font-mono text-[9px] py-2 px-0.5 rounded transition text-center">
+                                <i class="fas fa-desktop block mb-1 text-xs"></i> IoT Dash
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="secure-breakdown-panel" class="hidden mt-16 border border-zinc-800 rounded-xl p-6 bg-zinc-900/50 backdrop-blur shadow-2xl transition-all duration-300">
+            <div class="mb-6 flex justify-between items-center border-b border-zinc-800 pb-4">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-green-400" id="panel-title">Technical Specifications</h2>
+                    <p class="text-zinc-500 text-xs mt-1">Detailed secure documentation for H DEC LAB exhibition file.</p>
+                </div>
+                <button onclick="closeBreakdown()" class="text-xs font-mono text-zinc-400 hover:text-red-400 transition bg-zinc-950 px-3 py-1.5 rounded border border-zinc-800 shadow">
+                    <i class="fas fa-times mr-1"></i> Close
+                </button>
+            </div>
+            <div id="panel-content" class="bg-zinc-950 p-6 border border-zinc-800 rounded-lg"></div>
+        </div>
+    </section>
+
+    <div id="paywall-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="bg-zinc-900 border border-zinc-800 w-full max-w-md rounded-xl p-6 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closePaywall()" class="absolute top-4 right-4 text-zinc-500 hover:text-zinc-300 text-sm">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+            
+            <div class="text-center">
+                <div onclick="askAdminPassword()" class="w-12 h-12 bg-green-500/10 text-green-400 flex items-center justify-center rounded-full mx-auto mb-4 border border-green-500/20 cursor-pointer hover:bg-green-500/30 transition group" title="Admin Mode">
+                    <i class="fas fa-lock text-lg group-hover:scale-110 transition"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-1" id="paywall-title">Akses Spesifikasi Premium</h3>
+                <p class="text-xs text-zinc-400 px-2" id="paywall-subtitle">Buka blueprint rekayasa, rancangan kode penuh, dan data penunjang riset secara komprehensif.</p>
+            </div>
+
+            <div class="my-6 p-4 bg-zinc-950 border border-zinc-800 rounded-lg text-center space-y-4">
+                <div class="w-44 h-44 bg-white mx-auto rounded-lg p-2 flex items-center justify-center shadow-inner relative">
+                    <img src="logo hdeclab.jpeg" alt="QRIS QR" class="w-full h-full object-cover rounded opacity-30">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-2 text-center bg-zinc-950/90 rounded-lg">
+                        <i class="fas fa-qrcode text-3xl text-green-400 mb-1"></i>
+                        <span class="text-[11px] text-zinc-300 font-semibold font-mono">SCAN QRIS DISINI</span>
+                    </div>
+                </div>
+                
+                <div class="text-zinc-300 text-xs font-mono">
+                    <p class="text-zinc-500 uppercase tracking-widest text-[9px] mb-1">Tarif Akses Per Project:</p>
+                    <p class="text-xl font-black text-green-400">Rp 50.000 <span class="text-xs font-normal text-zinc-500">/ Full Akses</span></p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <p class="text-[10px] text-zinc-500 text-center leading-relaxed">
+                    <i class="fas fa-info-circle text-green-500 mr-1"></i> Silakan scan QRIS di atas, lakukan pembayaran, lalu ketuk tombol di bawah ini untuk mengirim bukti transfer ke WhatsApp admin agar kunci data proyek dibuka secara permanen.
+                </p>
+                <a id="wa-verify-btn" href="#" target="_blank" class="w-full bg-green-500 hover:bg-green-400 text-black text-center font-bold py-3 rounded-lg text-xs tracking-wider uppercase inline-flex items-center justify-center transition shadow-lg shadow-green-500/10">
+                    <i class="fab fa-whatsapp mr-2 text-sm"></i> Kirim Bukti Bayar via WA
+                </a>
+                <button onclick="closePaywall()" class="w-full border border-zinc-800 hover:bg-zinc-800 text-zinc-400 text-xs py-2 rounded-lg transition font-medium">
+                    Kembali Ke Portfolio
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" class="border-t border-zinc-900 py-16 px-4 bg-black/50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xl md:text-2xl font-bold mb-3">Mari Terhubung dengan H DEC LAB</h2>
+            <p class="text-zinc-400 text-sm max-w-md mx-auto mb-8">Ikuti perkembangan riset, pameran sirkuit, dan video pengerjaan proyek otomasi interaktif kami di platform sosial media.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://www.tiktok.com/@hdec_lab" target="_blank" class="w-full sm:w-auto bg-white hover:bg-zinc-200 text-black font-semibold px-6 py-3 rounded text-sm transition inline-flex items-center justify-center">
+                    <i class="fab fa-tiktok mr-2 text-base"></i> Watch on TikTok
+                </a>
+                <a href="https://instagram.com/hdec_lab" target="_blank" class="w-full sm:w-auto bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 px-6 py-3 rounded text-sm transition inline-flex items-center justify-center">
+                    <i class="fab fa-instagram text-pink-500 mr-2 text-base"></i> Follow Instagram
+                </a>
+            </div>
+            <p class="text-zinc-600 text-[11px] mt-16">© 2026 H DEC LAB. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // === KONFIGURASI UTAMA ===
+        const ADMIN_WHATSAPP = "628XXXXXXXXXX"; // Ubah jadi nomor WA-mu (Format Internasional)
+        const ADMIN_PASSWORD = "hdecadminrahasia"; // MASUKKAN PASSWORD ANDALANMU DI SINI!
+
+        // Penyimpanan status kunci project di memori lokal browser (Secara bawaan terkunci = false)
+        let unlockedProjects = {
+            fuel: false,
+            aqms: false,
+            climate: false
+        };
+
+        // Judul Readable untuk pesan WhatsApp
+        const projectTitles = {
+            fuel: "FuelGuard TDS System",
+            aqms: "AirGuard AQMS (Kualitas Udara)",
+            climate: "IoT Climate System"
+        };
+
+        // Penampung data spesifikasi breakdown teks eksebisi
+        // FIX: Semua jalur gambar (.imgSrc) disamakan dengan penulisan file fisik agar panel detail tidak broken saat di-klik
+        const safeDataDesc = {
+            fuel_program: { title: "FuelGuard TDS — Program & Firmware Architecture", icon: "fa-code", imgSrc: "SUHU.jpg", tags: "#ArduinoNano #C++ #EmbeddedFirmware #CalibrationLogic", desc: "Pengembangan baris kode firmware C++ pada Arduino Nano untuk pengolahan parameter kualitas cairan. Mengimplementasikan algoritma konversi data mentah analog sensor TDS menjadi nilai konduktivitas fisis beresolusi PPM. Struktur kode dirancang stabil dalam menapis read-noise agar ambang batas kontaminasi air pada bensin terbaca akurat." },
+            fuel_electronic: { title: "FuelGuard TDS — Electronic & Hardware Instrumentation", icon: "fa-microchip", imgSrc: "SUHU.jpg", tags: "#ArduinoNano #TDSModule #AnalogProbe #PowerRegulation", desc: "Perancangan arsitektur elektronika berbasis Arduino Nano sebagai unit pemroses utama. Sistem mengintegrasikan sirkuit pengondisian sinyal modul kit sensor TDS, sakelar daya mekanis (On/Off Rocker Switch), lampu indikator LED status, dan distribusi suplai daya DC portabel menggunakan baterai 9V." },
+            fuel_design: { title: "FuelGuard TDS — 3D Design & Precision Enclosure", icon: "fa-cube", imgSrc: "SUHU.jpg", tags: "#AutodeskInventor #3DModeling #BlackAcrylic #LaserCutting", desc: "Rancang bangun pelindung fisik perangkat berupa boks material akrilik hitam solid hasil pemodelan Autodesk Inventor skala milimeter. Tata letak mekanis dirancang presisi untuk memuat kompartemen baterai, dudukan internal board Nano, lubang sakelar toggle samping, serta potongan face-cutout simetris untuk LCD." },
+            fuel_display: { title: "FuelGuard TDS — Local Data Interface & Display", icon: "fa-desktop", imgSrc: "SUHU.jpg", tags: "#LCD16x2 #I2C-Bus #CharacterMapping #RealTimeVisual", desc: "Penyusunan antarmuka data lokal menggunakan modul LiquidCrystal LCD 16x2 karakter berbasis komunikasi I2C bus (alamat 0x27/0x3F). Mengonfigurasi pemetaan baris teks dinamis untuk menampilkan data numerik bensin/air secara real-time langsung di sasis alat, seperti pesan: 'TDS: 320.0 PPM / TERDETEKSI AIR!'." },
+            
+            aqms_program: { title: "AirGuard AQMS — Firmware & Sensor Sampling", icon: "fa-code", imgSrc: "WhatsApp Image 2026-06-08 at 14.50.54.jpeg", tags: "#MCU #C++Code #MQCalibration #DHT22Library", desc: "Pengembangan arsitektur kode C++ untuk penanganan multi-sensor lingkungan. Program melakukan kalkulasi rasio resistansi sensor MQ untuk ekstraksi kadar gas polutan dalam satuan PPM, sekaligus membaca sensor kelembapan secara simultan menggunakan interupsi non-blocking agar respon pembacaan kipas tetap reaktif." },
+            aqms_electronic: { title: "AirGuard AQMS — Circuit Architecture & Actuator Driver", icon: "fa-project-diagram", imgSrc: "WhatsApp Image 2026-06-08 at 14.50.54.jpeg", tags: "#MQ7-Sensor #DHT11 #DC-ExhaustFan #SignalConditioning", desc: "Integrasi instrumentasi sirkuit pengondisian sinyal analog sensor gas MQ-series serta sensor temperatur modul putih. Dilengkapi rancangan jalur interkoneksi driver penggerak aktuator kipas sirkulasi udara (DC Brushless Fan) untuk menarik sampel udara luar masuk ke dalam boks secara konstan." },
+            aqms_design: { title: "AirGuard AQMS — Mechanical 3D Enclosure & Aerodynamics", icon: "fa-layer-group", imgSrc: "WhatsApp Image 2026-06-08 at 14.50.54.jpeg", tags: "#ClearAcrylic #LaserCutting #InterlockSlot #VentilationHole", desc: "Desain sasis pelindung prototipe transparan (Clear Acrylic Box Enclosure) dengan pemodelan komponen 3D CAD berpresisi tinggi. Menggunakan teknik sambungan interlock slot mekanis dan dilengkapi lubang melingkar khusus sebagai dudukan exhaust fan untuk sirkulasi pembersihan polutan udara." },
+            aqms_display: { title: "AirGuard AQMS — Local Multi-Display Interface", icon: "fa-desktop", imgSrc: "WhatsApp Image 2026-06-08 at 14.50.54.jpeg", tags: "#LCD16x2 #I2C-Module #DataStreaming #AirQualityUI", desc: "Konfigurasi manajemen tampilan visual lokal berbasis LCD 16x2 I2C. Antarmuka teks diprogram ketat untuk menampilkan 4 parameter lingkungan sekaligus dalam satu layar, yaitu parameter temperatur (T), kelembapan (H), kadar gas karbon monoksida (CO PPM), serta teks string status kondisi udara ('BAIK/BURUK')." },
+            
+            climate_program: { title: "IoT Climate — Blynk Telemetry Firmware Core", icon: "fa-code", imgSrc: "SUHU.jpg", tags: "#ESP32-WiFi #BlynkSimple #DataStreaming #MillisTiming", desc: "Optimasi firmware telemetri C++ pada chip mikrokontroler Wi-Fi menggunakan Blynk IoT library. Mengonfigurasi fungsi transfer data periodik non-blocking (BlynkTimer) untuk mengirimkan parameter suhu ke Virtual Pin tanpa mengganggu siklus loop lokal, menjaga stabilitas tautan ping server nirkabel." },
+            climate_electronic: { title: "IoT Climate — Sensor Interface & Indicator Circuits", icon: "fa-microchip", imgSrc: "SUHU.jpg", tags: "#DHT-Sensor #PullUpResistor #LEDStatus #HardwareWiring", desc: "Penyusunan perkabelan sirkuit sensor temperatur stasiun cuaca mini. Jalur data dibekali resistor pull-up eksternal demi meminimalisir kegagalan pembacaan data single-bus, dilengkapi interkoneksi pin output digital ke baris lampu LED indikator (merah-kuning) sebagai tanda visual ambang batas suhu ruangan." },
+            climate_design: { title: "IoT Climate — Compact Bracket & Handheld Case", icon: "fa-cube", imgSrc: "SUHU.jpg", tags: "#CompactCase #BlackEnclosure #ComponentLayout #ErgonomicSlot", desc: "Perancangan mekanis casing boks hitam portabel yang solid dan ringkas. Struktur sasis berfokus pada kekuatan proteksi operasional lapangan, memberikan potongan celah ventilasi alami di area penempatan probe sensor suhu eksternal agar tidak terpapar hawa panas radiasi komponen sirkuit internal." },
+            climate_display: { title: "IoT Climate — Dual-Display Telemetry Dashboard", icon: "fa-desktop", imgSrc: "SUHU.jpg", tags: "#BlynkDashboard #CloudGauge #LCDYellowBacklight #WirelessTelemetry", desc: "Sistem visualisasi ganda sinkron (Dual-Display): Parameter iklim (Suhu & Kelembapan) dicetak secara lokal pada layar LCD fisik berlatar kuning-hijau pada alat, sekaligus ditransmisikan secara nirkabel dan ditampilkan ke PC dalam bentuk widget lingkaran grafis (*Circular Level Gauge*) Blynk IoT secara real-time." }
+        };
+
+        // === FUNGSI LOGIKA SISTEM ===
+
+        function handleProjectAccess(projectId, subSectionKey) {
+            if (unlockedProjects[projectId] === true) {
+                openBreakdown(subSectionKey);
+            } else {
+                triggerPaywall(projectId);
+            }
+        }
+
+        function triggerPaywall(projectId) {
+            const modal = document.getElementById('paywall-modal');
+            const waBtn = document.getElementById('wa-verify-btn');
+            const pTitle = document.getElementById('paywall-title');
+            
+            const namaProject = projectTitles[projectId] || "Engineering Project";
+            pTitle.innerText = `Akses Full — ${namaProject}`;
+
+            const textWA = encodeURIComponent(`Halo Admin H DEC LAB,\n\nSaya ingin membuka akses penuh dokumen spesifikasi untuk project *${namaProject}*.\n\nBerikut terlampir bukti transfer pembayaran Akses Premium Portofolio sebesar Rp 50.000.`);
+            waBtn.href = `https://wa.me/${ADMIN_WHATSAPP}?text=${textWA}`;
+            
+            modal.classList.remove('hidden');
+        }
+
+        function closePaywall() {
+            document.getElementById('paywall-modal').classList.add('hidden');
+        }
+
+        function askAdminPassword() {
+            const input = prompt("Masukkan Secure Admin Password untuk bypass enkripsi paywall:");
+            if (input === ADMIN_PASSWORD) {
+                alert("Akses Bypass Sukses! Seluruh proyek laboratorium telah dibuka.");
+                for (let key in unlockedProjects) {
+                    unlockedProjects[key] = true;
+                }
+                closePaywall();
+            } else if (input !== null) {
+                alert("Password Salah! Enkripsi gagal dilewati.");
+            }
+        }
+
+        function openBreakdown(key) {
+            const data = safeDataDesc[key];
+            if (!data) return;
+
+            const panel = document.getElementById('secure-breakdown-panel');
+            const content = document.getElementById('panel-content');
+            
+            content.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                    <div class="aspect-video bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800">
+                        <img src="${data.imgSrc}" alt="${data.title}" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-2 text-green-400 mb-3">
+                            <i class="fas ${data.icon} text-lg"></i>
+                            <h3 class="font-bold text-base text-zinc-100">${data.title}</h3>
+                        </div>
+                        <p class="text-zinc-500 text-[10px] font-mono mb-4 bg-zinc-900 py-1 px-2 rounded inline-block">${data.tags}</p>
+                        <p class="text-zinc-400 text-xs leading-relaxed mb-4">${data.desc}</p>
+                        <div class="p-3 bg-zinc-900/60 border border-zinc-800/60 rounded text-[11px] text-zinc-500 font-mono">
+                            <i class="fas fa-shield-alt text-green-500 mr-1"></i> Data Terverifikasi • H DEC LAB Source File Ok.
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            panel.classList.remove('hidden');
+            panel.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeBreakdown() {
+            document.getElementById('secure-breakdown-panel').classList.add('hidden');
+        }
+
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-green-500', 'text-black', 'font-semibold');
+                btn.classList.add('bg-zinc-900', 'text-zinc-400', 'hover:text-zinc-200');
+            });
+            
+            event.currentTarget.classList.remove('bg-zinc-900', 'text-zinc-400', 'hover:text-zinc-200');
+            event.currentTarget.classList.add('bg-green-500', 'text-black', 'font-semibold');
+
+            cards.forEach(card => {
+                const categories = card.getAttribute('data-category').split(',');
+                if (category === 'all' || categories.includes(category)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
